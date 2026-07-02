@@ -285,7 +285,8 @@
       background: white; border-radius: 14px; padding: 14px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.3);
     }
-    #qrcode canvas, #qrcode img { display: block !important; }
+    #qrcode canvas { display: block !important; }
+    #qrcode img    { display: none  !important; }
     .qr-label { font-size: 13px; color: var(--muted); text-align: center; font-weight: 500; }
     .qr-label strong { color: var(--green); display: block; font-size: 14px; margin-bottom: 2px; }
     .qr-arrow {
@@ -618,7 +619,7 @@
         </div>
         <div class="qr-label">
           <strong>Escanea con tu cámara</strong>
-          Apunta directamente a la descarga del APK
+          Abre la página y descarga el APK desde ahí
         </div>
       </div>
     </div>
@@ -837,7 +838,7 @@
 <script>
   // ── QR Code Generation ────────────────────────────
   window.addEventListener('load', function () {
-    const pageUrl = window.location.href.replace(/\/[^/]*$/, '/') + 'CampusFlow_v1.0.apk';
+    const pageUrl = 'https://JoseProano.github.io/VANTECH_CAMPUSFLOW/';
     new QRCode(document.getElementById('qrcode'), {
       text: pageUrl,
       width: 180,
